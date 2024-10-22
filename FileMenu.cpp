@@ -24,11 +24,22 @@ class FileMenu:public fstream{
         return true;
     }
     void createFile(){
+        if (!fileExist())
+        {
+            cout<<"File Already Exists"<<endl;
+            return;
+        }
+        
         file.open(totalPath,ios::out);
         cout<<"File Created"<<endl;
     }
 
     void writeFile(char data[]){
+         if (!fileExist())
+        {
+            appendFile(data);
+            return;
+        }
         file.open(totalPath,ios::out);
         file<<data<<endl;
         file.close();
@@ -37,13 +48,17 @@ class FileMenu:public fstream{
     void readFile(){
         if(!fileExist())return;
         fileR.open(totalPath);
-        while (!fileR.eof())
+        char c;
+        char str[200];
+        int i;
+        while (fileR>>noskipws>>c)
         {
-            char c;
-            fileR>>c;
+            // str[i++]=c;
             cout<<c;
         }
-        fileR.close();
+        cout<<str;
+        fileR.close();// i an fine
+        
     }
     
     void appendFile(char data[]){
@@ -51,6 +66,19 @@ class FileMenu:public fstream{
         file.open(totalPath,ios::app);
         file<<data;
         file.close();
+    }
+    void  searchData(string word){
+        if(!fileExist())return;
+        fileR.open(totalPath);
+        char c[500];
+        int i=0;
+        while (!fileR.eof())
+        {
+           fileR>>c[i++];
+        }
+        cout<<c;
+
+        
     }
     void exit(){
         file.close();
@@ -63,10 +91,12 @@ int main() {
     FileMenu f("D://","menu1.txt");
     char c[]="I am Fine1";
     char c1[]="Appedning This char";
-    f.writeFile(c);
+    // f.writeFile(c);
     // f.appendFile(c1);
     // f.appendFile(c1) ;
     f.readFile();
-    cout<<endl;
+    // cout<<endl;
+    f.searchData("f");
+    // cout<<endl;
     return 0;
 }
