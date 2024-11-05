@@ -11,11 +11,8 @@ int main() {
     double a2 = 5.675;
     double b2 = 5.3;
     sum=a2+b2;
-    cout<<fixed<<setprecision(2)<<sum<<endl;
-    cout<<static_cast<int>(sum)<<endl;
-    if((sum)==static_cast<int>(sum)){
-        cout<<sum;
-    }
+  
+  cout<<fixed<<setprecision(2)<<sum;
 
     return 0;
 }
