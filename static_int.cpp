@@ -10,8 +10,9 @@ int main() {
     // Test case 2
     double a2 = 5.675;
     double b2 = 5.3;
-    sum=a2+b2;
+    // sum=a2+b2;
   
+  // cout<<sum;
   cout<<fixed<<setprecision(2)<<sum;
 
     return 0;

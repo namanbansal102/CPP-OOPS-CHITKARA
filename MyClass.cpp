@@ -4,6 +4,12 @@ class  A{
 public:
     int val1;
     int val2;
+    A(){
+        cout<<"constructor Called";
+    }
+    A(int a){
+        cout<<"constructor Called";
+    }
     void setData(int value1, int value2){
         val1=value1;
         val2=value2;
@@ -27,7 +33,7 @@ class B : public A{
     
 };
 int main(){
-    B b(1,2,3);
-    b.displayData2();
-    b.displayData1();
+    A a;
+    a;
+    
 }

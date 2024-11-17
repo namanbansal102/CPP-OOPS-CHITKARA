@@ -23,6 +23,7 @@ class MyClass{
                 cout<<i<<" f";
                 }
         }
+        
         cout<<endl;
     }
 };

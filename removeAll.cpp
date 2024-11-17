@@ -32,7 +32,5 @@ int main() {
     *(t1.tId)=2;
     t1.display();
     s.display();
-
-
     return 0;
 }

@@ -43,5 +43,7 @@ int main() {
     Derived d;
     ptr=&d;
     ptr->func();
+
+    
     return 0;
 }
