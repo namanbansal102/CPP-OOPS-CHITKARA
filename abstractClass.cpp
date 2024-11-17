@@ -8,18 +8,22 @@ class Base{
     }
     Base(){
 
+        cout<<"Running Constructor (BASE)"<<endl;
     }
     public:
     virtual void func()=0;
     void display(){
-        cout<<"(Base) Class";
+        cout<<"(Base) Class...........";
+    }
+    ~ Base(){
+        cout<<"Running Base Destructor (BASE)";
     }
 };
 class Derived:public Base{
     public:
     int j;
     Derived(){
-
+cout<<"Running Derived Constructor"<<endl;
     }
     Derived(int x,int y):Base(x){
         this->j=y;
@@ -33,15 +37,21 @@ class Derived:public Base{
     void print(){
         cout<<i<<" "<<j;
     }
+    ~ Derived(){
+        cout<<"Running Derived Destructor"<<endl;
+    }
+
 };
 int main() {
     // Derived d(4,3);
     // d.print(); 
     // Derived *der;
     // der->print();
-    Base *ptr;
-    Derived d;
-    ptr=&d;
+    Base *ptr=new Derived;
+    // Derived d;
+    // ptr=&d;
+    ptr->display();
+    // d.func();
     ptr->func();
 
     

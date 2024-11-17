@@ -17,7 +17,7 @@ int main() {
     // m.primeCheck(n1,n2); 
     
     m.display()=10;
-    m.display()=m.display()+2;
+    m.display()=m.display()+2;0
     cout<<m.x<<endl;
     
     

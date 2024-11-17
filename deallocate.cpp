@@ -9,10 +9,10 @@
 using namespace std;
 int main() {
     char *arr=new char[5];
-    *arr='h';
+    *arr='h';   
     cout<<arr[0]<<endl;
     for(int i=0;i<2,147,483,648;i++){
-        int* m=new(nothrow) int(i);  
+        int* m=new(nothrow) int(i);  // this would return 0 as my output
         if(!m){
             cout<<"Memory Ends"<<m<<endl;
             break;

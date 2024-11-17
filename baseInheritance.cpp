@@ -9,13 +9,13 @@ class Animal{
         cout<<"Generic Sound (Animal)"<<endl;
     }
     void carp(){
-        sound();
+        this->sound();
     }
 };
 class Cat:public Animal{
     public: 
     void sound(){
-        cout<<"Billi Sound"<<endl;
+        cout<<"Billi Sound"<<endl  ; 
     }
 };
 int main() {
@@ -23,6 +23,8 @@ int main() {
     Cat c;
     ptr=&c;
     ptr->sound();
-    ptr->carp();
+    Animal a;
+    a.sound();
+
     return 0;
 }

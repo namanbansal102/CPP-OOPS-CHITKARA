@@ -19,7 +19,7 @@ void sum(int a,int b){
 int area(float a){
     return a*a;
 }
-float area(float a){
+int area(int a){
     return a*a;
 }
 
