@@ -30,7 +30,6 @@ class B:A{
             {
                 circle(side1);
             }
-            
         }
 
 };

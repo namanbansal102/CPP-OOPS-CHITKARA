@@ -17,14 +17,18 @@ class Cat:public Animal{
     void sound(){
         cout<<"Billi Sound"<<endl  ; 
     }
+    void catPunch(){
+        cout<<"Dispalying Punch Of Cat"<<endl;
+    }
 };
 int main() {
     Animal *ptr;
     Cat c;
     ptr=&c;
     ptr->sound();
-    Animal a;
-    a.sound();
+    Animal *a=new Cat;
+
+    
 
     return 0;
 }

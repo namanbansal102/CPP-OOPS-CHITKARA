@@ -22,6 +22,6 @@ int main() {
     MyClass a2;
     MyClass a3;
     MyClass a4;
-    MyClass::display();
+    cout<<MyClass::display();
     return 0;
 }

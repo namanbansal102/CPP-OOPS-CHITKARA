@@ -18,6 +18,9 @@ int main() {
             break;
         }
     }
+    // int *p=new(nothrow) int(7)
+    // int *k=new(nothrow) int[    2,147,483,648];
+    cout<<k[0];
     
     return 0;
 }

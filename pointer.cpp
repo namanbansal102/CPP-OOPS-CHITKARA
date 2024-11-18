@@ -4,7 +4,7 @@ class MyClass{
     public:
     int a;
    void display(int a){
-    a=a;
+    this->a=a;
     cout<<"Displaying Function "<<this->a<<endl;
     }
     void displayAdd(){
@@ -17,7 +17,7 @@ int main() {
     A=&B;
     A->display(3);
     B.displayAdd();
-    char a[][7]={"mayank"+-,"karan"};
+    char a[][7]={"mayank","karan"};
     // void A::(*ptr) = &display();
     cout<<a[0][1];
     return 0;

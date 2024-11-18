@@ -24,9 +24,9 @@ class Derived:public Base{
     }
 };
 int main() {
-    
-    Base *d=new De  rived();
-    delete d;
+    // Derived d;
+    Base *d=new Derived;
+    // delete d;
     // Base *b;
 
     return 0;

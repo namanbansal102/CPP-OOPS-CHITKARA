@@ -2,22 +2,21 @@
 #include<exception>
 using namespace std;
 int divison(int num,int a,int b){
-    int den=a-b;
-    try{
-    if(den==0){
-        throw "Exception by 0";
+   try{
+    if(a-b==0){
+        throw "Unable To Divide By Zero";
     }
-    else
-        return (num/den);
+    else{
+        cout<<num/(a-b);
     }
-    catch(const char *err){
-        cout<<err<<endl;
-    }
+   }
+   catch(const char* e){
+    cout<<e<<endl;
+   }
     
 }
 int main() {
     int x=-1; 
-    A a=new B();
     cout<<divison(50,2,2);
     return 0;
 }
