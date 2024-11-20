@@ -45,6 +45,9 @@ int main() {
 
     Base *b=new Derived;
     Derived *d=dynamic_cast<Derived*>(b);
+    d->ll();
+    // i other languages static function give eror whn you call by refrnce of object
+    // while in cpp ither lanugages it can be callex
     // d->print();
     // b->print();
     const int var1=10;
